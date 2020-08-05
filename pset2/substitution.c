@@ -5,6 +5,7 @@
 #include <string.h>
 
 bool validate();
+string cipher();
 
 int main(int argc, string argv[]) {
   if (argc != 2) {
@@ -19,6 +20,12 @@ int main(int argc, string argv[]) {
   }
 
   string plaintext = get_string("plaintext: ");
+  printf("ciphertext: %s\n", cipher(plaintext, key));
+
+  return 0;
+}
+
+string cipher(string plaintext, string key) {
   int len = strlen(plaintext);
   char ciphertext[len];
 
@@ -40,8 +47,7 @@ int main(int argc, string argv[]) {
   // terminate the string correctly
   ciphertext[len] = '\0';
 
-  printf("ciphertext: %s\n", ciphertext);
-  return 0;
+  return ciphertext;
 }
 
 bool validate(string key) {
