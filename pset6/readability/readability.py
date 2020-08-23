@@ -23,7 +23,7 @@ def calc_index(text):
             letcount += 1
         elif char.isspace():
             wordcount += 1
-        elif char == '.' or char == '!' or char == '?':
+        elif char in ['.', '!', '?']:
             sentcount += 1
 
     l = letcount / wordcount * 100
