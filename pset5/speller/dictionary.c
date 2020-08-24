@@ -1,11 +1,11 @@
 // Implements a dictionary's functionality
 
+#include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <strings.h>
-#include <ctype.h>
 
 #include "dictionary.h"
 
@@ -71,6 +71,7 @@ bool load(const char *dictionary) {
     word_count++;
   }
 
+  fclose(dict);
   return true;
 }
 
@@ -80,17 +81,17 @@ unsigned int size(void) { return word_count; }
 // Unloads dictionary from memory, returning true if successful else false
 bool unload(void) {
   for (int i = 0; i < N; i++) {
-    if (table[i] == NULL)
-      continue;
-
     node *list = table[i];
 
-    while(list != NULL) {
+    while (list != NULL) {
       node *tmp = list->next;
       free(list);
       list = tmp;
     }
+
+    if (i == N - 1 && list == NULL)
+      return true;
   }
 
-  return true;
+  return false;
 }
