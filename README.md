@@ -1,1 +1,27 @@
-cs50 coursework
+[cs50](https://cs50.harvard.edu/x/2020/) coursework
+
+- pset1
+  - [Mario](./pset1/mario.c)
+  - [Credit](./pset1/credit.c)
+- pset2
+  - [Substitution](./pset2/substitution.c)
+  - [Readability](./pset2/readability.c)
+- pset3
+  - [Plurarity](./pset3/plurality.c)
+  - [Runoff](./pset3/runoff.c)
+  - [Tideman](./pset3/tideman.c)
+- pset4
+  - [Filter](./pset4/filter/less/)
+  - [Recover](./pset4/recover/recover.c)
+- pset5
+  - [Speller](./pset5/speller)
+- pset6
+  - [Mario](./pset6/mario/more/mario.py)
+  - [Credit](./pset6/credit/credit.py)
+  - [Readability](./pset6/readability/readability.py)
+  - [DNA](./pset6/dna)
+- pset7
+  - [Movies](./pset7/movies)
+  - [Houses](./pset7/houses)
+- web
+  - [finance](./finance)
