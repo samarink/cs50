@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <td>Type</td>
+        <td>Symbol</td>
+        <td>Amount</td>
+        <td>Date</td>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+        <tr>
+          <td>{{ row['type'] }}</td>
+          <td>{{ row['symbol'] }}</td>
+          <td>{{ row['amount']|int }}</td>
+          <td>{{ row['date'] }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
